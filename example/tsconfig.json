@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-android-check-installed-apps": ["../src/index"],
+      "expo-android-check-installed-apps/*": ["../src/*"]
+    }
+  }
+}

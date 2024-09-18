@@ -1,0 +1,42 @@
+{
+  "name": "expo-android-check-installed-apps",
+  "version": "0.1.0",
+  "description": "An Expo module config plugin to check installed app existance in android",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-android-check-installed-apps",
+    "ExpoAndroidCheckInstalledApps"
+  ],
+  "repository": "https://github.com/mantu-bit/expo-android-check-installed-apps",
+  "bugs": {
+    "url": "https://github.com/mantu-bit/expo-android-check-installed-apps/issues"
+  },
+  "author": "Mantu <mantu.kumar@itechnolabs.tech> (https://github.com/mantu-bit)",
+  "license": "MIT",
+  "homepage": "https://github.com/mantu-bit/expo-android-check-installed-apps#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "expo-module-scripts": "^3.5.2",
+    "expo-modules-core": "^1.12.20"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

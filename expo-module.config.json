@@ -1,0 +1,9 @@
+{
+  "platforms": ["ios", "tvos", "android", "web"],
+  "ios": {
+    "modules": ["ExpoAndroidCheckInstalledAppsModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.androidcheckinstalledapps.ExpoAndroidCheckInstalledAppsModule"]
+  }
+}

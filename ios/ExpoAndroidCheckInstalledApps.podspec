@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage       = package['homepage']
   s.platforms      = { :ios => '13.4', :tvos => '13.4' }
   s.swift_version  = '5.4'
-  s.source         = { git: 'https://github.com/mantu-bit/expo-android-check-installed-apps' }
+  s.source         = { git: 'https://github.com/EndLess728/expo-android-check-installed-apps' }
   s.static_framework = true
 
   s.dependency 'ExpoModulesCore'

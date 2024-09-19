@@ -21,13 +21,13 @@
     "expo-android-check-installed-apps",
     "ExpoAndroidCheckInstalledApps"
   ],
-  "repository": "https://github.com/mantu-bit/expo-android-check-installed-apps",
+  "repository": "https://github.com/EndLess728/expo-android-check-installed-apps",
   "bugs": {
-    "url": "https://github.com/mantu-bit/expo-android-check-installed-apps/issues"
+    "url": "https://github.com/EndLess728/expo-android-check-installed-apps/issues"
   },
   "author": "Mantu <mantu.kumar@itechnolabs.tech> (https://github.com/mantu-bit)",
   "license": "MIT",
-  "homepage": "https://github.com/mantu-bit/expo-android-check-installed-apps#readme",
+  "homepage": "https://github.com/EndLess728/expo-android-check-installed-apps#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^18.0.25",

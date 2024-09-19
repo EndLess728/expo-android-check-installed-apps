@@ -20,7 +20,7 @@ public class ExpoAndroidCheckInstalledAppsModule: Module {
 
     // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
     Function("hello") {
-      return "Hello world! 👋"
+      return "Hello world! I am ios 👋"
     }
 
     // Defines a JavaScript function that always returns a Promise and whose native code
@@ -30,15 +30,6 @@ public class ExpoAndroidCheckInstalledAppsModule: Module {
       self.sendEvent("onChange", [
         "value": value
       ])
-    }
-
-    // Enables the module to be used as a native view. Definition components that are accepted as part of the
-    // view definition: Prop, Events.
-    View(ExpoAndroidCheckInstalledAppsView.self) {
-      // Defines a setter for the `name` prop.
-      Prop("name") { (view: ExpoAndroidCheckInstalledAppsView, prop: String) in
-        print(prop)
-      }
     }
   }
 }

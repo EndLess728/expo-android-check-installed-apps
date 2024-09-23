@@ -21,15 +21,46 @@ For bare React Native projects, you must ensure that you have [installed and con
 npm install expo-android-check-installed-apps
 ```
 
-### Configure for iOS
+## Methods
 
-Run `npx pod-install` after installing the npm package.
+### `checkInstalledApps`
 
+This asynchronous function accepts an array of package names and returns a promise that resolves with an object containing the installation status of each app.
 
-### Configure for Android
+#### Parameters
 
+- **`packageNames`** (`Array<string>`): An array of package names (strings) you want to check for installation on the device.
 
+#### Returns
+
+- **`Promise<Record<string, boolean>>`**: A promise that resolves to an object where the keys are package names and the values are booleans:
+  - `true`: The app with the specified package name is installed.
+  - `false`: The app with the specified package name is not installed.
+
+#### Example Usage
+
+```typescript
+const packageNames = ["com.google.android.apps.fitness", "com.android.chrome"];
+
+checkInstalledApps(packageNames)
+  .then((installedApps) => {
+    console.log(installedApps);
+    // Output: { "com.google.android.apps.fitness": false, "com.android.chrome": true }
+  })
+  .catch((error) => {
+    console.error("Error checking installed apps:", error);
+  });
+```
+
+#### Example Response
+
+```json
+{
+  "com.google.android.apps.fitness": false,
+  "com.android.chrome": true
+}
+```
 
 # Contributing
 
-Contributions are very welcome! Please refer to guidelines described in the [contributing guide]( https://github.com/expo/expo#contributing).
+Contributions are very welcome! Please refer to guidelines described in the [contributing guide](https://github.com/expo/expo#contributing).

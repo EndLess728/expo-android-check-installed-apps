@@ -1,6 +1,6 @@
 {
   "name": "expo-android-check-installed-apps",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "An Expo module config plugin to check installed app existance in android",
   "main": "build/index.js",
   "types": "build/index.d.ts",

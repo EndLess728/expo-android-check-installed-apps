@@ -11,7 +11,7 @@ export function hello(): string {
 
 export async function checkInstalledApps(
   packageNames: Array<string>
-): Promise<boolean> {
+): Promise<Record<string, boolean>> {
   return ExpoAndroidCheckInstalledAppsModule.checkAppsInstalled(packageNames);
 }
 

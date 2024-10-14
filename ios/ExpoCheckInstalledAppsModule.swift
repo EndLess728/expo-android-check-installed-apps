@@ -32,13 +32,18 @@ public class ExpoCheckInstalledAppsModule: Module {
       ])
     }
 
-    // Enables the module to be used as a native view. Definition components that are accepted as part of the
-    // view definition: Prop, Events.
-    View(ExpoCheckInstalledAppsView.self) {
-      // Defines a setter for the `name` prop.
-      Prop("name") { (view: ExpoCheckInstalledAppsView, prop: String) in
-        print(prop)
-      }
-    }
+    AsyncFunction("checkAppsInstalled") { (packageNames: [String], promise: Promise) in
+       var result: [String: Bool] = [:]
+
+       for packageName in packageNames {
+         if let url = URL(string: packageName), UIApplication.shared.canOpenURL(url) {
+           result[packageName] = true 
+         } else {
+           result[packageName] = false 
+         }
+       }
+
+       promise.resolve(result)
+     }
   }
 }

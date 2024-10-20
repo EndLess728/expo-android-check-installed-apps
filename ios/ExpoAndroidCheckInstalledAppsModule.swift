@@ -31,5 +31,19 @@ public class ExpoAndroidCheckInstalledAppsModule: Module {
         "value": value
       ])
     }
+
+    AsyncFunction("checkAppsInstalled") { (packageNames: [String], promise: Promise) in
+       var result: [String: Bool] = [:]
+
+       for packageName in packageNames {
+         if let url = URL(string: packageName), UIApplication.shared.canOpenURL(url) {
+           result[packageName] = true 
+         } else {
+           result[packageName] = false 
+         }
+       }
+
+       promise.resolve(result)
+     }
   }
 }

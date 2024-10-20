@@ -18,7 +18,7 @@ For bare React Native projects, ensure that you have [installed and configured t
 ### Add the package to your npm dependencies
 
 ```bash
-npm install expo-android-check-installed-apps
+npm install expo-check-installed-apps
 ```
 
 ## Methods
@@ -52,7 +52,7 @@ To check if an iOS app is installed, you need to add the app's url schema entrie
 #### Example Usage
 
 ```typescript
-import { checkInstalledApps } from 'expo-android-check-installed-apps';
+import { checkInstalledApps } from 'expo-check-installed-apps';
 import { Platform } from 'react-native';
 
 const packageNames = Platform.select({

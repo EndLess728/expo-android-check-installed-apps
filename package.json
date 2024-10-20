@@ -1,6 +1,6 @@
 {
-  "name": "expo-android-check-installed-apps",
-  "version": "0.1.2",
+  "name": "expo-check-installed-apps",
+  "version": "0.2.0",
   "description": "An Expo module config plugin to check installed app existance in android",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -18,17 +18,22 @@
   "keywords": [
     "react-native",
     "expo",
-    "expo-android-check-installed-apps",
+    "expo-check-installed-apps",
+    "expo-ios-check-installed-apps",
+    "expo-check-installed-apps",
+    "check installed apps",
     "ExpoAndroidCheckInstalledApps"
   ],
-  "repository": "https://github.com/EndLess728/expo-android-check-installed-apps",
-  "bugs": {
-    "url": "https://github.com/EndLess728/expo-android-check-installed-apps/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EndLess728/expo-check-installed-apps.git"
   },
-  "author": "Mantu <mantu.kumar@itechnolabs.tech> (https://github.com/mantu-bit)",
+  "bugs": {
+    "url": "https://github.com/EndLess728/expo-check-installed-apps/issues"
+  },
+  "author": "Mantu <aryanmk.mk5@gmail.com> (https://github.com/EndLess728)",
   "license": "MIT",
-  "homepage": "https://github.com/EndLess728/expo-android-check-installed-apps#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/EndLess728/expo-check-installed-apps#readme",
   "devDependencies": {
     "@types/react": "^18.0.25",
     "expo-module-scripts": "^3.5.2",
@@ -38,5 +43,8 @@
     "expo": "*",
     "react": "*",
     "react-native": "*"
+  },
+  "directories": {
+    "example": "example"
   }
 }

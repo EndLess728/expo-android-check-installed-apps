@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-android-check-installed-apps-example",
-    "slug": "expo-android-check-installed-apps-example",
+    "name": "expo-check-installed-apps-example",
+    "slug": "expo-check-installed-apps-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

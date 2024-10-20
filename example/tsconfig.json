@@ -3,8 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "expo-android-check-installed-apps": ["../src/index"],
-      "expo-android-check-installed-apps/*": ["../src/*"]
+      "expo-check-installed-apps": ["../src/index"],
+      "expo-check-installed-apps/*": ["../src/*"]
     }
   }
 }

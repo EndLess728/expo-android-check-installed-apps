@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 
-import { checkInstalledApps, hello } from "expo-android-check-installed-apps";
+import { checkInstalledApps, hello } from "expo-check-installed-apps";
 import { useEffect } from "react";
 
 export default function App() {

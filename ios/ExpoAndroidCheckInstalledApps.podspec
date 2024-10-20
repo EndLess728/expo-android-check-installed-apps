@@ -3,7 +3,7 @@ require 'json'
 package = JSON.parse(File.read(File.join(__dir__, '..', 'package.json')))
 
 Pod::Spec.new do |s|
-  s.name           = 'ExpoAndroidCheckInstalledApps'
+  s.name           = 'ExpoCheckInstalledApps'
   s.version        = package['version']
   s.summary        = package['description']
   s.description    = package['description']
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage       = package['homepage']
   s.platforms      = { :ios => '13.4', :tvos => '13.4' }
   s.swift_version  = '5.4'
-  s.source         = { git: 'https://github.com/EndLess728/expo-android-check-installed-apps' }
+  s.source         = { git: 'https://github.com/EndLess728/expo-check-installed-apps' }
   s.static_framework = true
 
   s.dependency 'ExpoModulesCore'

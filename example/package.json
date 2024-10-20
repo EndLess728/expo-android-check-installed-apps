@@ -1,5 +1,5 @@
 {
-  "name": "expo-android-check-installed-apps-example",
+  "name": "expo-check-installed-apps-example",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {

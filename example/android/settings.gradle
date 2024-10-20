@@ -44,7 +44,7 @@ if (getRNMinorVersion() >= 75) {
   }
 }
 
-rootProject.name = 'expo-android-check-installed-apps-example'
+rootProject.name = 'expo-check-installed-apps-example'
 
 dependencyResolutionManagement {
   versionCatalogs {

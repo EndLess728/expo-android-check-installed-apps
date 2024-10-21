@@ -2,6 +2,8 @@ package expo.modules.checkinstalledapps
 
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
+import android.content.pm.PackageManager
+import expo.modules.kotlin.Promise
 
 class ExpoCheckInstalledAppsModule : Module() {
   // Each module class must implement the definition function. The definition consists of components
@@ -23,7 +25,7 @@ class ExpoCheckInstalledAppsModule : Module() {
 
     // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
     Function("hello") {
-      "Hello world! 👋"
+      "Hello world! I am android👋"
     }
 
     // Defines a JavaScript function that always returns a Promise and whose native code
@@ -35,13 +37,33 @@ class ExpoCheckInstalledAppsModule : Module() {
       ))
     }
 
-    // Enables the module to be used as a native view. Definition components that are accepted as part of
-    // the view definition: Prop, Events.
-    View(ExpoCheckInstalledAppsView::class) {
-      // Defines a setter for the `name` prop.
-      Prop("name") { view: ExpoCheckInstalledAppsView, prop: String ->
-        println(prop)
+    // An asynchronous function that takes a list of package names and returns their installation status.
+    AsyncFunction("checkAppsInstalled") { packageNames: Array<String>, promise: Promise ->
+      // Call the function to check installed apps and return the result
+      checkAppsInstalled(packageNames, promise)
+    }
+
+  }
+
+  private val context
+    get() = requireNotNull(appContext.reactContext)
+
+  // Function to check if multiple apps are installed and resolve the promise with the result
+  private fun checkAppsInstalled(packageNames: Array<String>, promise: Promise) {
+    val pm: PackageManager = context.packageManager
+    val result = mutableMapOf<String, Boolean>()
+
+    // Iterate through the package names and check if each app is installed
+    for (packageName in packageNames) {
+      try {
+        pm.getPackageInfo(packageName, PackageManager.GET_ACTIVITIES)
+        result[packageName] = true // App is installed
+      } catch (e: PackageManager.NameNotFoundException) {
+        result[packageName] = false // App is not installed
       }
     }
+
+    // Resolve the promise with the map of package names and installation statuses
+    promise.resolve(result)
   }
 }
